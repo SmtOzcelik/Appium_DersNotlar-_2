@@ -14,7 +14,7 @@ import java.net.URL;
 
 public class C04_NativeElementleriTanimlama extends ApiDemosBaseTest {
 
-    @Test
+    @Test(priority = 1)
     public void testElement() throws MalformedURLException {
 
         //Locateleri arka arkaya sıralayıp aşağıda ayrı ayrı tıklarsak hata verir çünkü 2.ve 3. bulamaz
@@ -25,7 +25,7 @@ public class C04_NativeElementleriTanimlama extends ApiDemosBaseTest {
         WebElement alarmController=driver.findElement(AppiumBy.accessibilityId("Alarm Controller"));
         alarmController.click();
     }
-    @Test
+    @Test(priority = 2)
     public void testBy() throws MalformedURLException {
 
         By app=AppiumBy.accessibilityId("App");

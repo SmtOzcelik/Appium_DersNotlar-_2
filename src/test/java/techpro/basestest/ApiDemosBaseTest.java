@@ -2,8 +2,7 @@ package techpro.basestest;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -11,7 +10,7 @@ import java.net.URL;
 
 public class ApiDemosBaseTest {
     public AndroidDriver driver;
-    @BeforeTest
+    @BeforeMethod
     public void setup() throws MalformedURLException {
         String appPath = System.getProperty("user.dir")
                 + File.separator + "src"
@@ -24,7 +23,7 @@ public class ApiDemosBaseTest {
          driver = new AndroidDriver(url, options);
     }
 
-    @AfterTest
+    @AfterMethod
     public void tearDown(){
         driver.quit();
     }
