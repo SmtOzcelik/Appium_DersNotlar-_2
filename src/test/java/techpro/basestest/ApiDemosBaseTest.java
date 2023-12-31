@@ -7,6 +7,7 @@ import org.testng.annotations.*;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 public class ApiDemosBaseTest {
     public AndroidDriver driver;
@@ -21,6 +22,7 @@ public class ApiDemosBaseTest {
                 .setApp(appPath);
         URL url = new URL("http://0.0.0.0:4723");
          driver = new AndroidDriver(url, options);
+         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @AfterMethod

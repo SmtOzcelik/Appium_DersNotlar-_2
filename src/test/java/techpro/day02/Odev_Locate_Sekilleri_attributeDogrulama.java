@@ -10,7 +10,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class C_Odev_Locate_Sekilleri_attributeDogrulama {
+public class Odev_Locate_Sekilleri_attributeDogrulama {
     @Test
     public void testUiAutomator2Options() throws MalformedURLException {
         String appPath = System.getProperty("user.dir")
