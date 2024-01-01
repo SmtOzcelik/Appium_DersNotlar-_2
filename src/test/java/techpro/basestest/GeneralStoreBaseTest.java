@@ -4,13 +4,14 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import techpro.utilities.ReusableMethods;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-public class GeneralStoreBaseTest {
+public class GeneralStoreBaseTest extends ReusableMethods {
     public AndroidDriver driver;
     @BeforeMethod
     public void setup() throws MalformedURLException {
