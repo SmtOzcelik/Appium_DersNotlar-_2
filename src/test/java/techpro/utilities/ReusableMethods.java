@@ -22,4 +22,16 @@ public class ReusableMethods {
         ));
     }
 
+    public void doubleClickGesture(AndroidDriver driver, WebElement element){
+        driver.executeScript("mobile: doubleClickGesture", ImmutableMap.of(
+                "elementId", ((RemoteWebElement) element).getId()
+        ));
+    }
+    public void doubleClickGesture(AndroidDriver driver,int x,int y){
+        driver.executeScript("mobile: doubleClickGesture", ImmutableMap.of(
+                "x",x,
+                "y",y
+        ));
+    }
+
 }

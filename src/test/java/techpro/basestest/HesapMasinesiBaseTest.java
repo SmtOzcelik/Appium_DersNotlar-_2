@@ -6,12 +6,14 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import techpro.utilities.ReusableMethods;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-public class HesapMasinesiBaseTest {
+public class HesapMasinesiBaseTest extends ReusableMethods {
+
     public AndroidDriver driver;
     public By num0= AppiumBy.accessibilityId("0");
     public By num1=AppiumBy.accessibilityId("1");
