@@ -46,5 +46,21 @@ public class ReusableMethods {
                 "duration",1000 //istersek parametre olarak da koyabiliriz
         ));
     }
-
+    public void dragGesture(AndroidDriver driver, WebElement element,int endX,int endY){
+        driver.executeScript("mobile: dragGesture", ImmutableMap.of(
+                "elementId", ((RemoteWebElement) element).getId(),
+                "endX", endX,
+                "endY", endY,
+                "speed",500   // sürüklenmesini görmek için koyduk
+        ));
+    }
+    public void dragGesture(AndroidDriver driver,int startX,int startY,int endX,int endY){
+        driver.executeScript("mobile: dragGesture", ImmutableMap.of(
+                "startX",startX,
+                "startY",startY,
+                "endX", endX,
+                "endY", endY,
+                "speed",500   // sürüklenmesini görmek için koyduk
+        ));
+    }
 }

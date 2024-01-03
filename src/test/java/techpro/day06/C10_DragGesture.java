@@ -15,20 +15,23 @@ public class C10_DragGesture extends ApiDemosBaseTest {
         driver.findElement(AppiumBy.accessibilityId("Drag and Drop")).click();
 
         WebElement element=driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_1"));
-
+        /*
          driver.executeScript("mobile: dragGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) element).getId(),
                 "endX", 850,
                 "endY", 750,
                  "speed",500   // sürüklenmesini görmek için koyduk
         ));
+        */
+         dragGesture(driver,element,850,750);
+
          Thread.sleep(2000);
     }
     @Test
     public void testDragGestureCoordinate() throws InterruptedException {
         driver.findElement(AppiumBy.accessibilityId("Views")).click();
         driver.findElement(AppiumBy.accessibilityId("Drag and Drop")).click();
-
+        /*
         driver.executeScript("mobile: dragGesture", ImmutableMap.of(
                 "startX",300,
                 "startY",750,
@@ -36,6 +39,9 @@ public class C10_DragGesture extends ApiDemosBaseTest {
                 "endY", 750,
                 "speed",500   // sürüklenmesini görmek için koyduk
         ));
+        */
+        dragGesture(driver,300,750,850,750);
+
         Thread.sleep(2000);
     }
 }
