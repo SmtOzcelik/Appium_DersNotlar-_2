@@ -39,6 +39,12 @@ public class ReusableMethods {
                 "duration",1000 //istersek parametre olarak da koyabiliriz
         ));
     }
+    public void longClickGesture(AndroidDriver driver, WebElement element,int duration){
+        driver.executeScript("mobile: longClickGesture", ImmutableMap.of(
+                "elementId", ((RemoteWebElement) element).getId(),
+                "duration",duration //istersek parametre olarak da koyabiliriz
+        ));
+    }
     public void longClickGesture(AndroidDriver driver,int x,int y){
         driver.executeScript("mobile: longClickGesture", ImmutableMap.of(
                 "x",x,
