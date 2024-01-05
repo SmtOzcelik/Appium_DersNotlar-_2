@@ -1,11 +1,9 @@
-package techpro.day04;
+package techpro.day04_Practice;
 
 import io.appium.java_client.AppiumBy;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import techpro.basestest.ApiDemosBaseTest;
 import techpro.basestest.GeneralStoreBaseTest;
 
 import java.util.List;

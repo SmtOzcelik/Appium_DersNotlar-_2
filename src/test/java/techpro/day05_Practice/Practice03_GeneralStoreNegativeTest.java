@@ -1,4 +1,4 @@
-package techpro.day05;
+package techpro.day05_Practice;
 
 import io.appium.java_client.AppiumBy;
 import org.testng.Assert;

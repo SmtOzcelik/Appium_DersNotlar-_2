@@ -1,4 +1,4 @@
-package techpro.day04;
+package techpro.day04_Practice;
 
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
