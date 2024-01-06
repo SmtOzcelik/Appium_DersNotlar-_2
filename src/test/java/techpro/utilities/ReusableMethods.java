@@ -1,6 +1,7 @@
 package techpro.utilities;
 
 import com.google.common.collect.ImmutableMap;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -69,4 +70,25 @@ public class ReusableMethods {
                 "speed",500   // sürüklenmesini görmek için koyduk
         ));
     }
+    public void swipeGesture(AndroidDriver driver,WebElement element,String direction,double percent,int speed){
+        driver.executeScript("mobile: swipeGesture", ImmutableMap.of(
+                "elementId", ((RemoteWebElement) element).getId(),
+                "direction", direction,  //sağı görmek için kaydırma sola
+                "percent", percent ,  //0-1 arasında olmak zorunda
+                "speed",speed
+        ));
+    }
+    public void scrollGesture(AndroidDriver driver,WebElement element,String direction,double percent,int speed){
+        driver.executeScript("mobile: scrollGesture", ImmutableMap.of(
+                "elementId", ((RemoteWebElement) element).getId(),
+                "direction", direction,  //yönü belli et
+                "percent", percent ,  //0-1 arasında olmak zorunda
+                "speed",speed
+        ));
+    }
+    public void scrollToElementText(AndroidDriver driver,String text){
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"))"));
+        //bu method androidUIAutomator her zaman çalışmaz developer kullanmadı ise
+    }
+
 }
