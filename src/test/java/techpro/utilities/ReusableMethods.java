@@ -86,6 +86,21 @@ public class ReusableMethods {
                 "speed",speed
         ));
     }
+    public void pinchOpenGesture(AndroidDriver driver,int left,int top,int width,int heihgt,double percent){
+        driver.executeScript("mobile: pinchOpenGesture", ImmutableMap.of(
+                "left", left, "top", top, "width", width, "height", heihgt,
+                "percent",percent, // 0-1 arası yazılabilir
+                "speed",500
+        ));
+    }
+
+    public void pinchCloseGesture(AndroidDriver driver,int left,int top,int width,int heihgt,double percent){
+        driver.executeScript("mobile: pinchCloseGesture", ImmutableMap.of(
+                "left", left, "top", top, "width", width, "height", heihgt,
+                "percent",percent, // 0-1 arası yazılabilir
+                "speed",500
+        ));
+    }
     public void scrollToElementText(AndroidDriver driver,String text){
         driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"))"));
         //bu method androidUIAutomator her zaman çalışmaz developer kullanmadı ise
