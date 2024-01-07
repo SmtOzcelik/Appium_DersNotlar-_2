@@ -7,11 +7,10 @@ import org.openqa.selenium.interactions.Sequence;
 import org.testng.annotations.Test;
 import techpro.basestest.VodQABaseTest;
 
-import java.lang.reflect.Array;
 import java.time.Duration;
 import java.util.Arrays;
 
-public class C21_PointerInput_Zoomin extends VodQABaseTest {
+public class C22_PointerInput_ZoomOut extends VodQABaseTest {
     @Test
     public void testZoomIn() throws InterruptedException {
         driver.findElement(AppiumBy.accessibilityId("login")).click();
@@ -26,17 +25,17 @@ public class C21_PointerInput_Zoomin extends VodQABaseTest {
         Sequence sequence2=new Sequence(finger2,2);
 
         sequence1
-                .addAction(finger1.createPointerMove(Duration.ofMillis(0),PointerInput.Origin.viewport(),550,1550))
+                .addAction(finger1.createPointerMove(Duration.ofMillis(0),PointerInput.Origin.viewport(),300,1550))
                 .addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
                 .addAction(new Pause(finger1,Duration.ofMillis(300)))
-                .addAction(finger1.createPointerMove(Duration.ofMillis(500),PointerInput.Origin.viewport(),300,1550))
+                .addAction(finger1.createPointerMove(Duration.ofMillis(500),PointerInput.Origin.viewport(),550,1550))
                 .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
         sequence2
-                .addAction(finger2.createPointerMove(Duration.ofMillis(0),PointerInput.Origin.viewport(),750,1550))
+                .addAction(finger2.createPointerMove(Duration.ofMillis(0),PointerInput.Origin.viewport(),900,1550))
                 .addAction(finger2.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
                 .addAction(new Pause(finger2,Duration.ofMillis(300)))
-                .addAction(finger2.createPointerMove(Duration.ofMillis(500),PointerInput.Origin.viewport(),900,1550))
+                .addAction(finger2.createPointerMove(Duration.ofMillis(500),PointerInput.Origin.viewport(),750,1550))
                 .addAction(finger2.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
         driver.perform(Arrays.asList(sequence1,sequence2));
