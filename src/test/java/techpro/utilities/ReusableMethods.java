@@ -4,7 +4,10 @@ import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.remote.RemoteWebElement;
+
+import java.time.Duration;
 
 public class ReusableMethods {
     //driver classi olmadığı için methodlara parametre olarak ekledik
@@ -105,5 +108,7 @@ public class ReusableMethods {
         driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"))"));
         //bu method androidUIAutomator her zaman çalışmaz developer kullanmadı ise
     }
+
+
 
 }

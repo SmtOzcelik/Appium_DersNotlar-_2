@@ -25,18 +25,19 @@ public class C21_PointerInput_Zoomin extends VodQABaseTest {
         Sequence sequence1=new Sequence(finger1,1);
         Sequence sequence2=new Sequence(finger2,2);
 
+        // y kordinat ı sabit tut ve iki parmaktaki x aralığını da eşit yaparsak daha sağlıklı
         sequence1
                 .addAction(finger1.createPointerMove(Duration.ofMillis(0),PointerInput.Origin.viewport(),550,1550))
                 .addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
                 .addAction(new Pause(finger1,Duration.ofMillis(300)))
-                .addAction(finger1.createPointerMove(Duration.ofMillis(500),PointerInput.Origin.viewport(),300,1550))
+                .addAction(finger1.createPointerMove(Duration.ofMillis(500),PointerInput.Origin.viewport(),200,1550))
                 .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
         sequence2
                 .addAction(finger2.createPointerMove(Duration.ofMillis(0),PointerInput.Origin.viewport(),750,1550))
                 .addAction(finger2.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
                 .addAction(new Pause(finger2,Duration.ofMillis(300)))
-                .addAction(finger2.createPointerMove(Duration.ofMillis(500),PointerInput.Origin.viewport(),900,1550))
+                .addAction(finger2.createPointerMove(Duration.ofMillis(500),PointerInput.Origin.viewport(),1200,1550))
                 .addAction(finger2.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
         driver.perform(Arrays.asList(sequence1,sequence2));
