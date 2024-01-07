@@ -17,7 +17,7 @@ public class C16_PointerInput_DoubleTab extends HesapMasinesiBaseTest {
         driver.findElement(num8).click();
         driver.findElement(num7).click();
 
-        //875,400 kordinatlar
+        //x=875,y=400  kordinatlar
 
         PointerInput finger=new PointerInput(PointerInput.Kind.TOUCH,"finger");
 
