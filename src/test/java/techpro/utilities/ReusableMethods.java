@@ -109,6 +109,11 @@ public class ReusableMethods {
         //bu method androidUIAutomator her zaman çalışmaz developer kullanmadı ise
     }
 
+    public void bekle(int sn) throws InterruptedException {
+        Thread.sleep(sn*1000);
+
+    }
+
 
 
 }
