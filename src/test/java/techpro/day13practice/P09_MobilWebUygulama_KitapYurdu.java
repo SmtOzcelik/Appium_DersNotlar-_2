@@ -45,6 +45,5 @@ public class P09_MobilWebUygulama_KitapYurdu extends ChromeBrowserBaseTest {
         //üye olunduğunun doğrulanması
         WebElement headersText= driver.findElement(By.xpath("//h1[text()=\"Hesabınız Oluşturuldu!\"]"));
         Assert.assertTrue(headersText.isDisplayed());
-
     }
 }
